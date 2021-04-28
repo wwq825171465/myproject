@@ -1,0 +1,2309 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx150-fgg484-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc6slx150
+Target Package : fgg484
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Mon Jul 06 16:10:36 2020
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                 5,097 out of 184,304    2%
+    Number used as Flip Flops:               5,097
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      5,558 out of  92,152    6%
+    Number used as logic:                    5,131 out of  92,152    5%
+      Number using O6 output only:           2,492
+      Number using O5 output only:             532
+      Number using O5 and O6:                2,107
+      Number used as ROM:                        0
+    Number used as Memory:                      56 out of  21,680    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            56
+        Number using O6 output only:            13
+        Number using O5 output only:             0
+        Number using O5 and O6:                 43
+    Number used exclusively as route-thrus:    371
+      Number with same-slice register load:    292
+      Number with same-slice carry load:        79
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 2,262 out of  23,038    9%
+  Number of MUXCYs used:                     2,168 out of  46,076    4%
+  Number of LUT Flip Flop pairs used:        6,506
+    Number with an unused Flip Flop:         2,310 out of   6,506   35%
+    Number with an unused LUT:                 948 out of   6,506   14%
+    Number of fully used LUT-FF pairs:       3,248 out of   6,506   49%
+    Number of unique control sets:             236
+    Number of slice register sites lost
+      to control set restrictions:             812 out of 184,304    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       124 out of     338   36%
+    Number of LOCed IOBs:                      124 out of     124  100%
+    IOB Flip Flops:                             65
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         8 out of     268    2%
+  Number of RAMB8BWERs:                         44 out of     536    8%
+  Number of BUFIO2/BUFIO2_2CLKs:                 2 out of      32    6%
+    Number used as BUFIO2s:                      2
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       6 out of      16   37%
+    Number used as BUFGs:                        5
+    Number used as BUFGMUX:                      1
+  Number of DCM/DCM_CLKGENs:                     1 out of      12    8%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   9 out of     586    1%
+    Number used as ILOGIC2s:                     9
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        24 out of     586    4%
+    Number used as IODELAY2s:                    0
+    Number used as IODRP2s:                      2
+    Number used as IODRP2_MCBs:                 22
+  Number of OLOGIC2/OSERDES2s:                 103 out of     586   17%
+    Number used as OLOGIC2s:                    56
+    Number used as OSERDES2s:                   47
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     384    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         1 out of       4   25%
+  Number of DSP48A1s:                           78 out of     180   43%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                1 out of       4   25%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       6   16%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.70
+
+Peak Memory Usage:  877 MB
+Total REAL time to MAP completion:  7 mins 52 secs 
+Total CPU time to MAP completion:   6 mins 27 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:1653 - At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing
+   constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE
+   (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays
+   alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to
+   components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the
+   environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+   For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE,
+   consult the Xilinx Command Line Tools User Guide "TRACE" chapter.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network
+   mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<24> has no load.
+INFO:LIT:395 - The above info message is repeated 56 more times for the
+   following (max. 5 shown):
+   N791,
+   N795,
+   scl_IBUF,
+   sda_IBUF,
+   video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo
+   _256_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.g
+   l0.rd/gras.grdc1.rdc/rd_dc_i<9>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
+   Command Line Tools User Guide for information on generating a TSI report.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp pll_m0/dcm_sp_inst,
+   consult the device Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 220 block(s) removed
+  14 block(s) optimized away
+ 220 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<24>" is
+loadless and has been removed.
+ Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_24"
+(FF) removed.
+  The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<23>" is
+loadless and has been removed.
+   Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_23"
+(FF) removed.
+    The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<22>" is
+loadless and has been removed.
+     Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_22"
+(FF) removed.
+      The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<21>" is
+loadless and has been removed.
+       Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_21"
+(FF) removed.
+        The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<20>" is
+loadless and has been removed.
+         Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_20"
+(FF) removed.
+          The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<19>" is
+loadless and has been removed.
+           Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_19"
+(FF) removed.
+            The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<18>" is
+loadless and has been removed.
+             Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_18"
+(FF) removed.
+              The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<17>" is
+loadless and has been removed.
+               Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_17"
+(FF) removed.
+                The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<16>" is
+loadless and has been removed.
+                 Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_16"
+(FF) removed.
+                  The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<15>" is
+loadless and has been removed.
+                   Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_15"
+(FF) removed.
+                    The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<14>" is
+loadless and has been removed.
+                     Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_14"
+(FF) removed.
+                      The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<13>" is
+loadless and has been removed.
+                       Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_13"
+(FF) removed.
+                        The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<12>" is
+loadless and has been removed.
+                         Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_12"
+(FF) removed.
+                          The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<11>" is
+loadless and has been removed.
+                           Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_11"
+(FF) removed.
+                            The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<10>" is
+loadless and has been removed.
+                             Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_10"
+(FF) removed.
+                              The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<9>" is
+loadless and has been removed.
+                               Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_9"
+(FF) removed.
+                                The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<8>" is
+loadless and has been removed.
+                                 Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_8"
+(FF) removed.
+                                  The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<7>" is
+loadless and has been removed.
+                                   Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_7"
+(FF) removed.
+                                    The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<6>" is
+loadless and has been removed.
+                                     Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_6"
+(FF) removed.
+                                      The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<5>" is
+loadless and has been removed.
+                                       Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_5"
+(FF) removed.
+                                        The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<4>" is
+loadless and has been removed.
+                                         Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_4"
+(FF) removed.
+                                          The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<3>" is
+loadless and has been removed.
+                                           Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_3"
+(FF) removed.
+                                            The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<2>" is
+loadless and has been removed.
+                                             Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_2"
+(FF) removed.
+                                              The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<1>" is
+loadless and has been removed.
+                                               Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_1"
+(FF) removed.
+                                                The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r<0>" is
+loadless and has been removed.
+                                                 Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst0_sync_r_0"
+(FF) removed.
+*The signal "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst_tmp" is loadless
+and has been removed.
+* Loadless block "mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/rst_tmp1" (ROM)
+removed.
+*  The signal
+"mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/syn_clk0_powerup_pll_locked" is
+loadless and has been removed.
+*   Loadless block
+"mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/syn_clk0_powerup_pll_locked" (FF)
+removed.
+*    The signal
+"mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/syn_clk0_powerup_pll_locked_rstpo
+t" is loadless and has been removed.
+*     Loadless block
+"mem_ctrl_m0/ddr3_m0/memc3_infrastructure_inst/syn_clk0_powerup_pll_locked_rstpo
+t" (ROM) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<9>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<8>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<7>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<6>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<5>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<4>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<3>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<2>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<1>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<0>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr
+/gwas.wsts/ram_full_i" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<8>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<9>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<9>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_9" (FF) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<9>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<7>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<8>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<8>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_8" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<8>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<8>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<6>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<7>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<7>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_7" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<7>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<7>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<5>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<6>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<6>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_6" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<6>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<6>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<4>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<5>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<5>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_5" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<5>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<5>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<3>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<4>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<4>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_4" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<4>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<4>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<2>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<3>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<3>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_3" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<3>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<3>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<1>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<2>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<2>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_2" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<2>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<2>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<0>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<1>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<1>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_1" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<1>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<1>" is sourceless
+and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<0>1" is sourceless
+and has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<0>" (XOR) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<0>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_0" (FF) removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<0>" (MUX) removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/RD_PNTR[1]_RD_PNTR[2]_XOR_43_o" is sourceless and has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/rd_pntr_gc_1" (FF) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/D<1>" is sourceless and has been removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/Q_reg_1" (FF) removed.
+    The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/D<1>" is sourceless and has been removed.
+     Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg_1" (FF) removed.
+      The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg<1>" is sourceless and has been removed.
+The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/RD_PNTR[0]_RD_PNTR[1]_XOR_44_o" is sourceless and has been removed.
+ Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/rd_pntr_gc_0" (FF) removed.
+  The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/D<0>" is sourceless and has been removed.
+   Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/Q_reg_0" (FF) removed.
+    The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/D<0>" is sourceless and has been removed.
+     Sourceless block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg_0" (FF) removed.
+      The signal
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg<0>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<9>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<8>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<7>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<6>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<5>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<4>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<3>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<2>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<1>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<0>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr
+/gwas.wsts/ram_full_i" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<8>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<9>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<9>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_9" (FF) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<9>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<7>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<8>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<8>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_8" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<8>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<8>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<6>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<7>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<7>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_7" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<7>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<7>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<5>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<6>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<6>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_6" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<6>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<6>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<4>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<5>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<5>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_5" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<5>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<5>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<3>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<4>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<4>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_4" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<4>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<4>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<2>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<3>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<3>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_3" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<3>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<3>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<1>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<2>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<2>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_2" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<2>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<2>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<0>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<1>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<1>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_1" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<1>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<1>" is sourceless
+and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<0>1" is sourceless
+and has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<0>" (XOR) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<0>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_0" (FF) removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<0>" (MUX) removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/RD_PNTR[1]_RD_PNTR[2]_XOR_43_o" is sourceless and has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/rd_pntr_gc_1" (FF) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/D<1>" is sourceless and has been removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/Q_reg_1" (FF) removed.
+    The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/D<1>" is sourceless and has been removed.
+     Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg_1" (FF) removed.
+      The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg<1>" is sourceless and has been removed.
+The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/RD_PNTR[0]_RD_PNTR[1]_XOR_44_o" is sourceless and has been removed.
+ Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/rd_pntr_gc_0" (FF) removed.
+  The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/D<0>" is sourceless and has been removed.
+   Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/Q_reg_0" (FF) removed.
+    The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/D<0>" is sourceless and has been removed.
+     Sourceless block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg_0" (FF) removed.
+      The signal
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg<0>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<9>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<8>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<7>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<6>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<5>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<4>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<3>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<2>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<1>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<0>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr
+/gwas.wsts/ram_full_i" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<8>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<9>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<9>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_9" (FF) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<9>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<7>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<8>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<8>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_8" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<8>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<8>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<6>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<7>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<7>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_7" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<7>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<7>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<5>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<6>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<6>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_6" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<6>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<6>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<4>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<5>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<5>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_5" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<5>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<5>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<3>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<4>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<4>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_4" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<4>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<4>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<2>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<3>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<3>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_3" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<3>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<3>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<1>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<2>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<2>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_2" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<2>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<2>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<0>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<1>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<1>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_1" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<1>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<1>" is sourceless
+and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<0>1" is sourceless
+and has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<0>" (XOR) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<0>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_0" (FF) removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<0>" (MUX) removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/RD_PNTR[1]_RD_PNTR[2]_XOR_43_o" is sourceless and has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/rd_pntr_gc_1" (FF) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/D<1>" is sourceless and has been removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/Q_reg_1" (FF) removed.
+    The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/D<1>" is sourceless and has been removed.
+     Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg_1" (FF) removed.
+      The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg<1>" is sourceless and has been removed.
+The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/RD_PNTR[0]_RD_PNTR[1]_XOR_44_o" is sourceless and has been removed.
+ Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/rd_pntr_gc_0" (FF) removed.
+  The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/D<0>" is sourceless and has been removed.
+   Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/Q_reg_0" (FF) removed.
+    The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/D<0>" is sourceless and has been removed.
+     Sourceless block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg_0" (FF) removed.
+      The signal
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg<0>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<9>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<8>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<7>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<6>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<5>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<4>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<3>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<2>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<1>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i<0>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr
+/gwas.wsts/ram_full_i" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<8>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<9>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<9>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_9" (FF) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<9>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<7>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<8>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<8>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_8" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<8>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<8>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<6>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<7>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<7>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_7" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<7>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<7>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<5>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<6>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<6>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_6" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<6>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<6>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<4>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<5>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<5>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_5" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<5>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<5>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<3>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<4>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<4>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_4" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<4>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<4>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<2>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<3>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<3>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_3" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<3>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<3>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<1>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<2>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<2>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_2" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<2>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<2>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<0>" is sourceless and
+has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<1>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<1>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_1" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<1>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<1>" is sourceless
+and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<0>1" is sourceless
+and has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_xor<0>" (XOR) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/GND_242_o_GND_242_o_sub_3_OUT<0>" is sourceless and has been
+removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/rd_dc_i_0" (FF) removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_cy<0>" (MUX) removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/RD_PNTR[1]_RD_PNTR[2]_XOR_43_o" is sourceless and has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/rd_pntr_gc_1" (FF) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/D<1>" is sourceless and has been removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/Q_reg_1" (FF) removed.
+    The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/D<1>" is sourceless and has been removed.
+     Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg_1" (FF) removed.
+      The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg<1>" is sourceless and has been removed.
+The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/RD_PNTR[0]_RD_PNTR[1]_XOR_44_o" is sourceless and has been removed.
+ Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/rd_pntr_gc_0" (FF) removed.
+  The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/D<0>" is sourceless and has been removed.
+   Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[1].wr_stg_inst/Q_reg_0" (FF) removed.
+    The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/D<0>" is sourceless and has been removed.
+     Sourceless block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg_0" (FF) removed.
+      The signal
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/gsync_stage[2].wr_stg_inst/Q_reg<0>" is sourceless and has been removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/Mxor_RD_PNTR[0]_RD_PNTR[1]_XOR_44_o_xo<0>1" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/Mxor_RD_PNTR[1]_RD_PNTR[2]_XOR_43_o_xo<0>1" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<0>1_INV_0" (BUF)
+removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<1>_INV_0" (BUF)
+removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<2>" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<3>" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<4>" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<5>" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<6>" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<7>" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<8>" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<9>" (ROM) removed.
+Unused block
+"video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr
+/gwas.wsts/ram_full_i" (FF) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/Mxor_RD_PNTR[0]_RD_PNTR[1]_XOR_44_o_xo<0>1" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/Mxor_RD_PNTR[1]_RD_PNTR[2]_XOR_43_o_xo<0>1" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<0>1_INV_0" (BUF)
+removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<1>_INV_0" (BUF)
+removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<2>" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<3>" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<4>" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<5>" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<6>" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<7>" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<8>" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<9>" (ROM) removed.
+Unused block
+"video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr
+/gwas.wsts/ram_full_i" (FF) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/Mxor_RD_PNTR[0]_RD_PNTR[1]_XOR_44_o_xo<0>1" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/Mxor_RD_PNTR[1]_RD_PNTR[2]_XOR_43_o_xo<0>1" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<0>1_INV_0" (BUF)
+removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<1>_INV_0" (BUF)
+removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<2>" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<3>" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<4>" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<5>" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<6>" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<7>" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<8>" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<9>" (ROM) removed.
+Unused block
+"video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr
+/gwas.wsts/ram_full_i" (FF) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/Mxor_RD_PNTR[0]_RD_PNTR[1]_XOR_44_o_xo<0>1" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.cl
+kx/Mxor_RD_PNTR[1]_RD_PNTR[2]_XOR_43_o_xo<0>1" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<0>1_INV_0" (BUF)
+removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<1>_INV_0" (BUF)
+removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<2>" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<3>" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<4>" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<5>" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<6>" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<7>" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<8>" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd
+/gras.grdc1.rdc/Msub_GND_242_o_GND_242_o_sub_3_OUT<9:0>_lut<9>" (ROM) removed.
+Unused block
+"video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_2
+56_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr
+/gwas.wsts/ram_full_i" (FF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND
+		video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/g
+bm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND
+GND
+		video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/XST_GND
+VCC
+		video_pro_m0/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/XST_VCC
+GND
+		video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/g
+bm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND
+GND
+		video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/XST_GND
+VCC
+		video_pro_m1/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/XST_VCC
+GND
+		video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/g
+bm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND
+GND
+		video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/XST_GND
+VCC
+		video_pro_m2/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/XST_VCC
+GND
+		video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/g
+bm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND
+GND
+		video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/XST_GND
+VCC
+		video_pro_m3/vout_pro_m0/vout_frame_buffer_ctrl_m0/vout_frame_buffer_ctrlfifo_
+256_64i_16o_m0/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 11 - Timing Report
+--------------------------
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Number of Timing Constraints that were not applied: 4
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_mem_ctrl_m0_ddr3_m0_memc3_infrastructu | SETUP       |    -0.770ns|    25.120ns|       1|         770
+  re_inst_mcb_drp_clk_bufg_in = PERIOD TIME | HOLD        |     0.060ns|            |       0|           0
+  GRP "mem_ctrl_m0_ddr3_m0_memc3_infrastruc |             |            |            |        |            
+  ture_inst_mcb_drp_clk_bufg_in" TS_CLOCK_I |             |            |            |        |            
+  N_50M * 1.5625 HIGH 50%                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_mem_ctrl_m0_ddr3_m0_memc3_infrastructu | MINPERIOD   |     0.101ns|     1.499ns|       0|           0
+  re_inst_clk_2x_0 = PERIOD TIMEGRP "mem_ct |             |            |            |        |            
+  rl_m0_ddr3_m0_memc3_infrastructure_inst_c |             |            |            |        |            
+  lk_2x_0" TS_CLOCK_IN_50M * 12.5 HIGH 50%  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_mem_ctrl_m0_ddr3_m0_memc3_infrastructu | MINPERIOD   |     0.101ns|     1.499ns|       0|           0
+  re_inst_clk_2x_180 = PERIOD TIMEGRP "mem_ |             |            |            |        |            
+  ctrl_m0_ddr3_m0_memc3_infrastructure_inst |             |            |            |        |            
+  _clk_2x_180" TS_CLOCK_IN_50M * 12.5 PHASE |             |            |            |        |            
+   0.8 ns HIGH 50%                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_CLOCK_IN_50M = PERIOD TIMEGRP "CLOCK_I | MINLOWPULSE |    15.000ns|     5.000ns|       0|           0
+  N_50M" 50 MHz HIGH 50%                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_pll_m0_clkfx = PERIOD TIMEGRP "pll_m0_ | SETUP       |     1.099ns|     5.635ns|       0|           0
+  clkfx" TS_CLOCK_IN_27M * 5.5 HIGH 50%     | HOLD        |     0.087ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_mem_ctrl_m0_ddr3_m0_memc3_infrastructu | SETUP       |     2.311ns|     4.089ns|       0|           0
+  re_inst_clk0_bufg_in = PERIOD TIMEGRP "me | HOLD        |     0.132ns|            |       0|           0
+  m_ctrl_m0_ddr3_m0_memc3_infrastructure_in |             |            |            |        |            
+  st_clk0_bufg_in" TS_CLOCK_IN_50M * 3.125  |             |            |            |        |            
+  HIGH 50%                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_Path_P_N = MAXDELAY FROM TIMEGRP "CVBS | SETUP       |     2.456ns|     0.544ns|       0|           0
+  _CLKP" TO TIMEGRP "CVBS_CLKN" 3 ns DATAPA | HOLD        |     0.257ns|            |       0|           0
+  THONLY                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_CLOCK_IN_27M = PERIOD TIMEGRP "CLOCK_I | MINLOWPULSE |    21.036ns|    16.000ns|       0|           0
+  N_27M" 27 MHz HIGH 50%                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_CVBS_CLKP = PERIOD TIMEGRP "CVBS_CLKP" | SETUP       |     7.368ns|     1.927ns|       0|           0
+   9.295 ns HIGH 50%                        | HOLD        |     0.257ns|            |       0|           0
+                                            | MINPERIOD   |     6.629ns|     2.666ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_CVBS_CLKN = PERIOD TIMEGRP "CVBS_CLKN" | SETUP       |    33.855ns|     3.325ns|       0|           0
+   TS_CVBS_CLKP * 4 HIGH 50%                | HOLD        |     0.087ns|            |       0|           0
+                                            | MINPERIOD   |    33.610ns|     3.570ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_CLOCK_IN_27M
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CLOCK_IN_27M                |     37.037ns|     16.000ns|     30.993ns|            0|            0|            0|        79329|
+| TS_pll_m0_clkfx               |      6.734ns|      5.635ns|          N/A|            0|            0|        79329|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_CLOCK_IN_50M
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CLOCK_IN_50M                |     20.000ns|      5.000ns|     39.250ns|            0|            1|            0|        51416|
+| TS_mem_ctrl_m0_ddr3_m0_memc3_i|     12.800ns|     25.120ns|          N/A|            1|            0|        24208|            0|
+| nfrastructure_inst_mcb_drp_clk|             |             |             |             |             |             |             |
+| _bufg_in                      |             |             |             |             |             |             |             |
+| TS_mem_ctrl_m0_ddr3_m0_memc3_i|      1.600ns|      1.499ns|          N/A|            0|            0|            0|            0|
+| nfrastructure_inst_clk_2x_0   |             |             |             |             |             |             |             |
+| TS_mem_ctrl_m0_ddr3_m0_memc3_i|      6.400ns|      4.089ns|          N/A|            0|            0|        27208|            0|
+| nfrastructure_inst_clk0_bufg_i|             |             |             |             |             |             |             |
+| n                             |             |             |             |             |             |             |             |
+| TS_mem_ctrl_m0_ddr3_m0_memc3_i|      1.600ns|      1.499ns|          N/A|            0|            0|            0|            0|
+| nfrastructure_inst_clk_2x_180 |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_CVBS_CLKP
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CVBS_CLKP                   |      9.295ns|      2.666ns|      0.893ns|            0|            0|          101|        35435|
+| TS_CVBS_CLKN                  |     37.180ns|      3.570ns|          N/A|            0|            0|        35435|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_27m                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clk_50m                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| cvbs_in_clkn                       | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| cvbs_in_clkp                       | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| cvbs_in_data<0>                    | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| cvbs_in_data<1>                    | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| cvbs_in_data<2>                    | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| cvbs_in_data<3>                    | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| cvbs_in_data<4>                    | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| cvbs_in_data<5>                    | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| cvbs_in_data<6>                    | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| cvbs_in_data<7>                    | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| hdmi_out_clk                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| hdmi_out_de                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_hs                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_b<0>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_b<1>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_b<2>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_b<3>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_b<4>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_b<5>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_b<6>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_b<7>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_g<0>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_g<1>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_g<2>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_g<3>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_g<4>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_g<5>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_g<6>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_g<7>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_r<0>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_r<1>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_r<2>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_r<3>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_r<4>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_r<5>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_r<6>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_rgb_r<7>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| hdmi_out_vs                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| mcb3_dram_a<0>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<1>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<2>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<3>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<4>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<5>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<6>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<7>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<8>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<9>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<10>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<11>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<12>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<13>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<0>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<1>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<2>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_cas_n                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ck                       | IOB              | OUTPUT    | DIFF_SSTL15_II       |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ck_n                     | IOB              | OUTPUT    | DIFF_SSTL15_II       |       |          |      | OSERDES      |          |          |
+| mcb3_dram_cke                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_dm                       | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<0>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<1>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<2>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<3>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<4>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<5>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<6>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<7>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<8>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<9>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<10>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<11>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<12>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<13>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<14>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<15>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dqs                      | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLDOWN |          |
+| mcb3_dram_dqs_n                    | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLUP   |          |
+| mcb3_dram_odt                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ras_n                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_reset_n                  | IOB              | OUTPUT    | LVCMOS15             |       | 12       | SLOW | OSERDES      |          |          |
+| mcb3_dram_udm                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_udqs                     | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLDOWN |          |
+| mcb3_dram_udqs_n                   | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLUP   |          |
+| mcb3_dram_we_n                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_rzq                           | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          | DEFAULT  |
+| mcb3_zio                           | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          | DEFAULT  |
+| scl                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sda                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sys_key0                           | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| vga_out_clk                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<0>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<1>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<2>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<3>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<4>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<5>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<6>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<7>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<8>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<9>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<10>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<11>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<12>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<13>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<14>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<15>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<16>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<17>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<18>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<19>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<20>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<21>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<22>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_data<23>                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_de                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_hs                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| vga_out_vs                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

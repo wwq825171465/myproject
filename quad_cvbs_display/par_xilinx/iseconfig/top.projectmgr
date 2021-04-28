@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="top" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/lite_fifo C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|common_rtl|lite_fifo.v</ClosedNode>
+         <ClosedNode>/mcb_ui_top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|xilinx|ddr|mcb_controller|mcb_ui_top.v</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/clock_out_m0 - clock_out</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/clock_out_m1 - clock_out</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/mem_ctrl_m0 - mem_ctrl</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/scaler_K_gen_m0 - scaler_K_gen</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/vga_out_io_m0 - vga_out_io</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/video_pro_m0 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/video_pro_m0 - video_pro/vin_pro_m0 - vin_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/out_buff0 - lite_fifo</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler/line_buf_scaler_m0 - line_buf_scaler</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler/line_buf_scaler_m1 - line_buf_scaler</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/vout_frame_buffer_ctrl_m0 - vout_frame_buffer_ctrl</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/video_pro_m1 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/vin_rgb_pro_m0 - vin_rgb_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|top.v/vout_display_pro_m0 - vout_display_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|quad_cvbs_display|src|top.v</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|quad_cvbs_display|src|top.v/video_pro_m1 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|quad_cvbs_display|src|top.v/video_pro_m2 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|quad_cvbs_display|src|top.v/video_pro_m3 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|meisq|Desktop|AX845_new|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/mem_ctrl_m0 - mem_ctrl</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/mem_ctrl_m0 - mem_ctrl/ddr3_m0 - ddr3_top/memc3_wrapper_inst - memc_wrapper</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/vga_out_io_m0 - vga_out_io</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vin_pro_m0 - vin_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vin_pro_m0 - vin_pro/buffer_f - lite_fifo</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vin_pro_m0 - vin_pro/vin_frame_buffer_ctrl_m0 - vin_frame_buffer_ctrl</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/out_buff0 - lite_fifo</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler/line_buf_scaler_m0 - line_buf_scaler</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler/line_buf_scaler_m1 - line_buf_scaler</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/vout_frame_buffer_ctrl_m0 - vout_frame_buffer_ctrl</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m1 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m2 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m3 - video_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m3 - video_pro/vin_pro_m0 - vin_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m3 - video_pro/vout_pro_m0 - vout_pro/out_buff0 - lite_fifo</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m3 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/video_pro_m3 - video_pro/vout_pro_m0 - vout_pro/vout_frame_buffer_ctrl_m0 - vout_frame_buffer_ctrl</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m0 - layer_blend</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m1 - layer_blend</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m2 - layer_blend</ClosedNode>
+         <ClosedNode>/top C:|Users|wwq|Desktop|school|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m3 - layer_blend</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/mem_ctrl_m0 - mem_ctrl/ddr3_m0 - ddr3_top</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/mem_ctrl_m0 - mem_ctrl/ddr3_m0 - ddr3_top/memc3_wrapper_inst - memc_wrapper/mcb_ui_top_inst - mcb_ui_top</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/vga_out_io_m0 - vga_out_io</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/out_buff0 - lite_fifo</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler/line_buf_scaler_m0 - line_buf_scaler</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler/line_buf_scaler_m1 - line_buf_scaler</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/vout_frame_buffer_ctrl_m0 - vout_frame_buffer_ctrl</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m1 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m2 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m3 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m0 - layer_blend</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m1 - layer_blend</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m2 - layer_blend</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m3 - layer_blend</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/mem_ctrl_m0 - mem_ctrl/ddr3_m0 - ddr3_top</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/vga_out_io_m0 - vga_out_io</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vin_pro_m0 - vin_pro/buffer_f - lite_fifo</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vin_pro_m0 - vin_pro/vin_frame_buffer_ctrl_m0 - vin_frame_buffer_ctrl</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/out_buff0 - lite_fifo</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/scaler_m0 - scaler</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/video_pro_m0 - video_pro/vout_pro_m0 - vout_pro/vout_frame_buffer_ctrl_m0 - vout_frame_buffer_ctrl</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/video_pro_m1 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/video_pro_m2 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/video_pro_m3 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m0 - layer_blend</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m1 - layer_blend</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m2 - layer_blend</ClosedNode>
+         <ClosedNode>/top D:|graduation project|project|quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro/layer_blend_m3 - layer_blend</ClosedNode>
+         <ClosedNode>/top Y:|project|AV|AV845|cd|CD|02_demo|w|15_quad_cvbs_display|src|top.v/mem_ctrl_m0 - mem_ctrl</ClosedNode>
+         <ClosedNode>/top Y:|project|AV|AV845|cd|CD|02_demo|w|15_quad_cvbs_display|src|top.v/vga_out_io_m0 - vga_out_io</ClosedNode>
+         <ClosedNode>/top Y:|project|AV|AV845|cd|CD|02_demo|w|15_quad_cvbs_display|src|top.v/video_pro_m0 - video_pro</ClosedNode>
+         <ClosedNode>/top Y:|project|AV|AV845|cd|CD|02_demo|w|15_quad_cvbs_display|src|top.v/video_pro_m1 - video_pro</ClosedNode>
+         <ClosedNode>/top Y:|project|AV|AV845|cd|CD|02_demo|w|15_quad_cvbs_display|src|top.v/video_pro_m2 - video_pro</ClosedNode>
+         <ClosedNode>/top Y:|project|AV|AV845|cd|CD|02_demo|w|15_quad_cvbs_display|src|top.v/video_pro_m3 - video_pro</ClosedNode>
+         <ClosedNode>/top Y:|project|AV|AV845|cd|CD|02_demo|w|15_quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro</ClosedNode>
+         <ClosedNode>/vout_display_pro C:|Users|meisq|Desktop|AX845_new|double_cvbs_pip|src|vout_display_pro.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>vin_frame_buffer_ctrl_m0 - vin_frame_buffer_ctrl (D:/graduation project/project/quad_cvbs_display/src/common_rtl/video/vin_frame_buffer_ctrl.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >12</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002e1000000020000000000000000000000000200000064ffffffff000000810000000300000002000002e10000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>vin_frame_buffer_ctrl_m0 - vin_frame_buffer_ctrl (D:/graduation project/project/quad_cvbs_display/src/common_rtl/video/vin_frame_buffer_ctrl.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e8000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027d000000040101000100000000000000000000000064ffffffff0000008100000000000000040000003d0000000100000000000000240000000100000000000000780000000100000000000001a40000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>alpha_blend.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000121000000010001000100000000000000000000000064ffffffff000000810000000000000001000001210000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001cb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001cb0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff00000000000000020000019a0000000001000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000017e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000017e0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/tb_sd D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|par_xilinx|tb_sd.v</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/clock_out_m0 - clock_out</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/mem_ctrl_m0 - mem_ctrl</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/vga_out_io_m0 - vga_out_io</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m0 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m1 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m2 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/video_pro_m3 - video_pro</ClosedNode>
+         <ClosedNode>/top D:|AV6150|AV6150_CD|02_demo|15_quad_cvbs_display|src|top.v/vout_display_pro_m0 - vout_display_pro</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>tb_vesa (D:/AV6150/AV6150_CD/02_demo/15_quad_cvbs_display/par_xilinx/tb_vesa.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002e1000000020000000000000000000000000200000064ffffffff000000810000000300000002000002e10000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>tb_vesa (D:/AV6150/AV6150_CD/02_demo/15_quad_cvbs_display/par_xilinx/tb_vesa.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e8000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e8000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+</Project>

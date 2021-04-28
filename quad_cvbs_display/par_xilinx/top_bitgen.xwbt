@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\AV6150\AV6150_CD\02_demo\15_quad_cvbs_display\par_xilinx\top.ncd
+OUTFILE=D:\AV6150\AV6150_CD\02_demo\15_quad_cvbs_display\par_xilinx\top.bit
+FAMILY=Spartan6
+PART=xc6slx150-2fgg484
+WORKINGDIR=D:\AV6150\AV6150_CD\02_demo\15_quad_cvbs_display\par_xilinx
+LICENSE=ISE
+USER_INFO=_

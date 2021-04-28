@@ -1,0 +1,43 @@
+# Reading C:/modeltech64_10.2c/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.2c Jul 19 2013 
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {tb_vesa.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module vout_display_timing
+# 
+# Top level modules:
+# 	vout_display_timing
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module tb_vesa
+# 
+# Top level modules:
+# 	tb_vesa
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.tb_vesa glbl 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading work.tb_vesa(fast)
+# Loading work.vout_display_timing(fast)
+# Loading work.glbl(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+add wave -position insertpoint sim:/tb_vesa/uut/*
+restart
+# Loading work.tb_vesa(fast)
+# Loading work.vout_display_timing(fast)
+# Loading work.glbl(fast)
+run
